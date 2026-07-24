@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaikus — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Inter, sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 32px 20px 64px;
+         line-height: 1.6; color: #14122B; background: #F6F6FC; }
+  h1 { font-size: 1.8rem; margin-bottom: 0.2em; }
+  h2 { font-size: 1.2rem; margin-top: 2em; }
+  .meta { color: #5C5A78; font-size: 0.95rem; }
+  a { color: #5B57E8; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #E9E8F4; background: #100F1F; }
+    .meta { color: #A09EBE; }
+    a { color: #8B88F2; }
+  }
+</style>
+</head>
+<body>
+<h1>Vaikus — Privacy Policy</h1>
+<p class="meta">Effective date: July 24, 2026</p>
+
+<p>Vaikus is a call-blocking application for Android. It is designed around a simple principle: <strong>your data never leaves your device, because the app has no way to send it anywhere.</strong></p>
+
+<h2>Data we collect</h2>
+<p>None. Vaikus does not collect, store on servers, transmit, sell, or share any personal data. The app does not request the Internet permission, so it is technically incapable of network communication. There are no analytics, no advertising SDKs, no crash reporting services, and no user accounts.</p>
+
+<h2>Data stored on your device</h2>
+<p>Vaikus keeps the following information locally on your phone, under the app's private storage, solely to provide its functionality:</p>
+<ul>
+  <li><strong>Blocking rules</strong> you create (numbers, prefixes, labels, settings).</li>
+  <li><strong>A log of blocked calls</strong> (number, time, and which rule was applied). The log is kept for a limited period you control (up to 90 days or 500 entries) and can be cleared at any time in Settings.</li>
+  <li><strong>App preferences</strong> (language, theme, country, notification options).</li>
+</ul>
+<p>This information is deleted when you clear the app's data or uninstall the app. If you use the export feature, a file with your rules is saved only to the location you choose; sharing that file is entirely under your control.</p>
+
+<h2>How call screening works</h2>
+<p>Vaikus uses the official Android call screening role (<code>CallScreeningService</code>). When a call arrives from a number that is not in your contacts, the system briefly provides the number to the app on your device so a blocking decision can be made. This processing happens locally and instantly; the number is stored only in the local blocked-call log described above, and only if the call was blocked.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Call screening role</strong> — granted by you via a system dialog; required to filter calls.</li>
+  <li><strong>Notifications (Android 13+)</strong> — requested only if you enable optional notifications about blocked calls.</li>
+</ul>
+<p>Vaikus does not request access to your contacts, call log, microphone, location, or storage.</p>
+
+<h2>Third parties</h2>
+<p>No data is shared with third parties, because no data is collected. The app contains no third-party tracking or advertising components.</p>
+
+<h2>Children's privacy</h2>
+<p>Vaikus is not directed at children and, as described above, collects no data from any user.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the updated version will be published at this address with a new effective date. Since the app cannot communicate over the network, any material change to data handling would also be visible in the app's permission list.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:alexander.chelpanov@proton.me">alexander.chelpanov@proton.me</a></p>
+</body>
+</html>
