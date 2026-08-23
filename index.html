@@ -22,7 +22,8 @@
 </head>
 <body>
 <h1>Vaikus — Privacy Policy</h1>
-<p class="meta">Effective date: July 24, 2026</p>
+<p class="meta">Effective date: August 23, 2026 &middot; previous version: July 24, 2026</p>
+<p class="meta">What changed: Vaikus can now limit a blocking rule to one SIM card. That added one optional permission, described under <a href="#permissions">Permissions</a>. Nothing else changed, and the app still has no way to send anything anywhere.</p>
 
 <p>Vaikus is a call-blocking application for Android. It is designed around a simple principle: <strong>your data never leaves your device, because the app has no way to send it anywhere.</strong></p>
 
@@ -35,17 +36,24 @@
   <li><strong>Blocking rules</strong> you create (numbers, prefixes, labels, settings).</li>
   <li><strong>A log of blocked calls</strong> (number, time, and which rule was applied). The log is kept for a limited period you control (up to 90 days or 500 entries) and can be cleared at any time in Settings.</li>
   <li><strong>App preferences</strong> (language, theme, country, notification options).</li>
+  <li><strong>The list of SIM cards</strong>, only if you granted the optional phone-state permission described below: an identifier for each calling account and the name shown for it, so a rule can be limited to one SIM. You can rename them in Settings.</li>
 </ul>
 <p>This information is deleted when you clear the app's data or uninstall the app. If you use the export feature, a file with your rules is saved only to the location you choose; sharing that file is entirely under your control.</p>
 
 <h2>How call screening works</h2>
-<p>Vaikus uses the official Android call screening role (<code>CallScreeningService</code>). When a call arrives from a number that is not in your contacts, the system briefly provides the number to the app on your device so a blocking decision can be made. This processing happens locally and instantly; the number is stored only in the local blocked-call log described above, and only if the call was blocked.</p>
+<p>Vaikus uses the official Android call screening role (<code>CallScreeningService</code>). When a call arrives from a number that is not in your contacts, the system briefly provides the number to the app on your device so a blocking decision can be made. This processing happens locally and instantly; the number is stored only in the local blocked-call log described above, and only if the call was blocked. If the system indicates which SIM the call arrived on, that is recorded alongside the log entry.</p>
 
-<h2>Permissions</h2>
+<h2 id="permissions">Permissions</h2>
 <ul>
   <li><strong>Call screening role</strong> — granted by you via a system dialog; required to filter calls.</li>
   <li><strong>Notifications (Android 13+)</strong> — requested only if you enable optional notifications about blocked calls.</li>
+  <li><strong>Phone state (<code>READ_PHONE_STATE</code>)</strong> — optional, and requested only when you tap “SIM detection” in Settings. It lets a blocking rule apply to one SIM card instead of all of them. Vaikus reads only the list of calling accounts on the device and the names shown for them. It does not read your phone number, IMEI, serial number, subscriber ID, carrier details, or the state of any call.</li>
 </ul>
+
+<p><strong>Why the system dialog sounds broader than it is.</strong> Android labels this request with the name of the entire permission group rather than the single permission being asked for, so the dialog reads “Allow Vaikus to make and manage phone calls?”. Vaikus does neither. It cannot place a call — it does not hold the <code>CALL_PHONE</code> permission — and “Call” buttons in the app only hand a number to your phone app for you to confirm. The wording comes from Android; what the app actually reads is the list above.</p>
+
+<p>Declining costs you nothing else: every other feature keeps working, and SIM cards are then recognised gradually instead, as calls arrive on each of them. You can revoke the permission at any time in Android Settings.</p>
+
 <p>Vaikus does not request access to your contacts, call log, microphone, location, or storage.</p>
 
 <h2>Third parties</h2>
